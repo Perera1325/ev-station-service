@@ -76,6 +76,34 @@ Future Improvements
 * WSO2 API Gateway integration
 * Docker deployment
 
+
+Day 5 — WSO2 API Gateway Integration
+
+The Booking Microservice is now exposed through WSO2 API Manager acting as an API Gateway. Instead of clients calling the microservice directly, requests are routed through the WSO2 Gateway with token-based authentication.
+
+Architecture:
+
+Client → WSO2 API Gateway → Booking Service → Station Service → Database
+
+Key Features Implemented:
+
+* API publishing using WSO2 API Manager
+* Secure access using Bearer token authentication
+* Subscription and token generation via Developer Portal
+* Gateway routing to backend microservice
+* Enterprise-level API management architecture
+
+Gateway Endpoint Example:
+
+https://localhost:8243/booking/1.0.0/bookings
+
+Authorization Header:
+
+Authorization: Bearer <ACCESS_TOKEN>
+
+This demonstrates real-world API management and microservice gateway integration.
+
+
 Author
 
 Vinod Perera
