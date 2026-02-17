@@ -15,11 +15,18 @@ public class StationService {
         this.repository = repository;
     }
 
+    // Save station
     public Station saveStation(Station station) {
         return repository.save(station);
     }
 
+    // Get all stations
     public List<Station> getAllStations() {
         return repository.findAll();
+    }
+
+    // Get station by ID (VERY IMPORTANT for Booking Service)
+    public Station getStationById(Long id) {
+        return repository.findById(id).orElse(null);
     }
 }
